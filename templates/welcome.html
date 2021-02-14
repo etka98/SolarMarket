@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <title>Solar Market</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles/main.css">
+  <link rel="short icon" type="image/png" >
+  <style>
+
+
+    .full-height {
+      height: 100vh;
+    }
+
+    .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .position-ref {
+      position: relative;
+    }
+
+    .top-right {
+      position: absolute;
+      right: 10px;
+      top: 18px;
+    }
+
+
+    .links > a {
+      padding: 15px 35px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .1rem;
+      text-decoration: none;
+    }
+
+
+    /*
+light green : #54606F
+Medium : #80BA9F
+dark :#DCB645
+#F79530
+#F66936
+*/
+
+    *,
+    *::after,
+    *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    html {
+      font-size: 62.5%; /*10/16 = .625 */
+    }
+
+    body {
+      font-family: "Lato", sans-serif;
+      font-weight: 400;
+      background-color: #eab354;
+      /*font-size: 16px;*/
+      line-height: 1.7;
+      color: #777;
+      padding: 3rem;
+      box-sizing: border-box;
+    }
+
+    .solar-card {
+      background-color: #262b2b;
+    }
+
+    .solar-buton {
+      border-left: solid 4px #eab354;
+      border-bottom: solid 4px #eab354;
+
+    }
+
+    .solar-buton:hover {
+      background-color: #262b2b;
+      color: #eab354;
+      border-left: none;
+      border-bottom: none;
+      border-right: solid 4px #eab354;
+      border-top: solid 4px #eab354;
+    }
+
+    .header {
+      height: 95vh;
+      background-color: #262b2b;
+      background-size: cover;
+      background-position: top;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* x y */
+    }
+
+    .header__logo-box {
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+      border-radius: 100%;
+      padding: 10px;
+    }
+
+    .header__logo {
+      height: 5rem;
+    }
+
+    .header__logo:hover {
+      animation: moveInRight 1s ease-out;
+    }
+
+    .header__text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .heading-primary {
+      color: #fff;
+      margin-bottom: 6rem;
+      backface-visibility: hidden;
+    }
+
+    .heading-primary--main {
+      display: block;
+      font-size: 5rem;
+      font-weight: 400;
+      letter-spacing: 2rem;
+
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      /* animation-iteration-count: 3;*/
+      /* animation-delay: 1s; */
+    }
+
+    .heading-primary--sub {
+      display: block;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 1.75rem;
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+    }
+
+    @keyframes moveInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+      }
+
+      80% {
+        transform: translateX(2rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+
+    @keyframes moveInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(10rem);
+      }
+
+      80% {
+        transform: translateX(-1rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+
+    @keyframes moveInBottom {
+      0% {
+        opacity: 0;
+        transform: translateY(3rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+
+    .bton:link,
+    .bton:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all .2s;
+      position: relative;
+      font-size: 1.6rem;
+    }
+
+    .bton:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    }
+
+    .bton:active {
+      transform: translateY(-1px);
+      box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+
+    .bton--white {
+      background-color: #eab354;
+      color: #262b2b;
+    }
+
+    .bton::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 10rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all .4s;
+    }
+
+    .bton--white::after {
+      background-color: #eab354;
+    }
+
+    .bton:hover::after {
+      transform: scaleX(1.2) scaleY(1.4);
+      opacity: 0;
+    }
+
+    .bton--animated {
+      animation: moveInBottom .5s ease-out .75s;
+      animation-fill-mode: backwards;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="w-64 h-8 flex p-4">
+      <a href="/">
+        <div class="rounded-full bg-red-500 h-4 w-4 mr-2"></div>
+      </a>
+      <div class="rounded-full bg-yellow-500 h-4 w-4 mr-2"></div>
+      <div class="rounded-full bg-green-500 h-4 w-4 mr-2"></div>
+    </div>
+    <div class="header__logo-box">
+      <img src="static/sunny.png" alt="logo" class="header__logo">
+    </div>
+
+    <div class="header__text-box">
+      <h1 class="heading-primary">
+        <span class="heading-primary--main">YAŞAMAK İÇİN</span>
+        <span class="heading-primary--sub">BU HAYATI YAŞATMAK İÇİN</span>
+      </h1>
+
+    </div>
+
+    <div class="flex-center position-ref full-height">
+      
+
+      <div class="top-right links">
+
+        <a class="mt-4 px-6 mr-6 py-6  solar-buton text-white font-bold" href="login">Giriş</a>
+
+
+        <a class="mt-4 px-6 py-6  solar-buton text-white font-bold" href="register">Kayıt Ol</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+</body>
+
+
+
+</html>

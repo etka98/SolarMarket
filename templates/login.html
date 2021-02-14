@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Solar Market</title>
+
+    <!-- Scripts -->
+    <script src="" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="static/styles/main.css" rel="stylesheet">
+    <style>
+        body{
+        background-image: url(solar.jpg); !important;
+        }
+        .solar-card{
+            background-color: #262b2b ;
+        }
+        .profil{
+            background-color: #eab354;
+
+        }
+        .profil:hover {
+            background-color: #262b2b ;
+            color: #eab354;
+        }
+    </style>
+</head>
+<body style="background-image: url(static/solar.jpg); background-repeat: no-repeat; background-size: cover; ">
+    <div class="min-h-screen w-full overflow-auto">
+        <div class="mt-20">
+            <div class="max-w-screen-lg bg-white rounded-lg shadow-xl mx-auto flex">
+                <div class="w-1/2 solar-card">
+                    <div class="w-64 h-8 flex p-4">
+                        <a href="/"><div class="rounded-full bg-red-500 h-4 w-4 mr-2"></div></a>
+                        <div class="rounded-full bg-yellow-500 h-4 w-4 mr-2"> </div>
+                        <div class="rounded-full bg-green-500 h-4 w-4 mr-2"> </div>
+                    </div>
+                    <header class="p-10 mt-16">
+                        <img src="static/sunny.png" alt="Logo" class="w-24 mx-auto">
+                        <h3 class="text-center text-white text-4xl pt-2 font-medium">Solar Market</h3>
+                        <p class="text-xl mt-4 text-white text-center">GELECEĞE YATIRIM</p>
+                    </header>
+                    <footer>
+
+                    </footer>
+                </div>
+                <div class="w-1/2">
+                    <div class="p-10 mx-auto mt-20">
+                        <h3 class="text-3xl mb-8 font-medium">Giriş</h3>
+                        <form method="POST" action="#">
+
+                            <div>
+                                <label for="email" class="col-md-4 mt-8 col-form-label text-md-right">Email Adresi</label>
+                                <input id="email" type="email" class="form-control border my-3 px-3 py-2 w-full" placeholder="customer@gmail.com" name="email" value="" required autocomplete="email" autofocus>
+
+                            </div>
+
+                            <div>
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Parola</label>
+                                <input id="password" type="password" class="form-control border my-3 px-3 py-2 w-full" name="password" required autocomplete="current-password">
+
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember">
+
+                                        <label class="form-check-label" for="remember">
+                                          Beni Hatırla
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="submit" class="mt-4 px-6 py-3 rounded profil text-sm text-white font-bold">
+                                        Giriş
+                                    </button>
+
+                                    <a class="btn btn-link px-2">
+                                        Şifremi Unuttum
+                                    </a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+

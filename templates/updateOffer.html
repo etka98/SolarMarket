@@ -1,0 +1,102 @@
+
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles/main.css">
+    <style>
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        body{
+            background-image: linear-gradient(to right bottom, rgb(96, 95, 96), rgba(245, 212, 41, 0.69)), url(solar.jpg);
+
+        }
+        .header__logo{
+            height: 3rem;
+        }
+        .buton{
+            background-color: #eab354;
+        }
+        .buton:hover
+        {
+            background-color:  #262b2b;
+        }
+    </style>
+</head>
+
+<body class="bg-cover bg-center h-screen bg-fixed" >
+    <div class="mt-3 ml-4 absolute rounded-full ">
+        <img src="static/sunny.png" alt="logo" class="header__logo">
+    </div>
+
+    <header class="dropdown m-2 absolute right-0">
+        <button class="bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+            <span class="mr-1">Hesap</span>
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+        </button>
+        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/login">Anasayfa</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="logout">
+                Çıkış
+                <form id="logout-form" action="logout" method="POST" style="display: none;">
+
+                </form>
+            </a></li>
+        </ul>
+    </header>
+    <div class="min-h-screen w-full overflow-auto">
+        <div class="mt-8">
+            <div class="max-w-screen-lg bg-white rounded-lg shadow-xl mx-auto flex ">
+                <div class="w-1/2 bg-gray-700" style="background: #262b2b;">
+                    <div class="w-64 h-8 flex p-4">
+                        <a  href="/"><div class="rounded-full bg-red-500 h-4 w-4 mr-2"></div></a>
+                        <div class="rounded-full bg-yellow-500 h-4 w-4 mr-2"> </div>
+                        <div class="rounded-full bg-green-500 h-4 w-4 mr-2"> </div>
+                    </div>
+                    <header class="p-20 mt-32 items-center">
+                        <img src="static/solar-panel.png" alt="Logo" class=" mx-auto items-center text-center">
+
+                    </header>
+                    <footer>
+
+                    </footer>
+                </div>
+                <div class="w-1/2">
+                    <div class="p-8 mx-auto mt-8">
+                        <div class="flex justify-between">
+                            <h3 class="text-3xl mb-8 font-medium">Teklif Yenile</h3>
+                            <img src="static/sunny.png" class="w-10 h-10" alt="">
+                        </div>
+                        <form method="POST" action="#">
+                            <div class="mt-4">
+                                <label for="mom" >Fiyat</label>
+                                <div class="mt-2">
+                                     <div class="mt-2">
+                                        <input id="name" placeholder="$" type="text" class="form-control border my-3 px-3 py-2 w-full  " name="fiyat" value="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="mt-4 buton px-6 py-3 rounded text-sm text-white font-bold">
+                                    Teklif Ver
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+

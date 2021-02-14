@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles/main.css">
+</head>
+
+<style>
+    body{
+        font-family: Montserrat, sans-serif;
+        background: #262b2b;
+    }
+    .buton{
+        background-color: #eab354;
+    }
+    .buton:hover
+    {
+        background-color:  #262b2b;
+    }
+    .ico:hover{
+        background-color: #5f787b;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+</style>
+<body class="bg-cover relative bg-center h-screen bg-fixed">
+    <div class="dropdown m-2 absolute text-base right-0 mr-6">
+        <button class="bg-gray-300 text-gray-700 py-2 px-4 rounded inline-flex items-center">
+            <span class="mr-1 text-base">Hesap</span>
+            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/> </svg>
+        </button>
+        <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+            <li class=""><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="login">Anasayfa</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="logout">
+                Çıkış
+                <form id="logout-form" action="logout" method="POST" style="display: none;">
+
+                </form>
+            </a></li>
+        </ul>
+    </div>
+    <div class="flex flex-row " >
+        <div  class="lg:w-1/4 ">
+            <div >
+                <div class="text-center mt-6">
+                    <div class="flex flex-row justify-center mb-4">
+                    </div>
+                    <p class="text-white ">{{nameSurname[0]}} {{" "}} {{nameSurname[1]}}</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="lg:w-1/2  py-20 flex justify-between  " >
+        </div>
+
+
+    </div>
+
+    <div class="flex flex-row justify-between">
+        <div class="flex items-center  text-white py-6 font-bold text-center flex-col w-1/4 h-64 ">
+
+            <a href="editProfil" class="m-2 ico rounded-full px-8 py-2 align-baseline flex flex-row">Profili Düzenle<svg viewBox="0 0 20 20" fill="orange" class="ml-2 user w-6 h-6"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg></a>
+            <a href="myOffer" class="m-2 ico  rounded-full px-8 py-2 align-baseline flex flex-row">Tekliflerim<svg viewBox="0 0 20 20" fill="orange" class="ml-2 map w-6 h-6"><path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clip-rule="evenodd"></path></svg></a>
+
+
+        </div>
+        <div class="w-1/2">
+            <p class="text-white">
+                İlan Listesi
+            </p>
+            <form action="#" method="post">
+                {% for ad in adsList %}
+                    <div class="flex flex-col ">
+                        
+                        <div class="flex mb-4 mt-2 bg-gray-700 p-3 rounded-lg">
+                            <div class="mr-4">
+                            </div>
+                            <div >
+                                <div class="">
+                                    <h5 class="font-bold mb-4 text-white ">Satıcı İsmi: {{ad[0]}} {{' '}} {{ad[1]}}</h5>
+                                    <p class="text-sm text-white">Tel No: {{ad[2]}}</p>
+                                    <p class="text-sm text-white">Konum: {{ad[4]}}</p>
+                                    <p class="text-sm text-white">Büyüklük: {{ad[5]}}</p>
+                                    <p class="text-sm text-white">Kapasite: {{ad[6]}}</p>
+                                    <p class="text-sm text-white">Fiyat: {{ad[7]}}$</p>
+                                </div>
+                                <div class="flex flex-row">
+                                    <div class="flex flex-row flex mt-2 mr-10">
+                                        <button type="submit" class="mt-4 px-6 py-3 rounded profil text-sm text-white font-bold" name="offerB" value="{{ad[9]}}">
+                                                Teklif Ver
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </form>
+            
+        </div>
+        <div class="w-1/4 lg:h-64 flex flex-col text-center text-white">
+            <ul>
+                <li>
+                    <div class="flex items-center justify-center text-sm text-white">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>

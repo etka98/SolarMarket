@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Solar Market</title>
+
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="static/styles/main.css" rel="stylesheet">
+    <style>
+        .solar-card {
+            background-color: #262b2b;
+        }
+
+        .profil {
+            background-color: #eab354;
+
+        }
+
+        .profil:hover {
+            background-color: #262b2b;
+            color: #eab354;
+        }
+    </style>
+</head>
+<body style="background-image: url(static/register.jpg); background-repeat: no-repeat; background-size: cover; ">
+    <div class="min-h-screen w-full overflow-auto">
+        <div class="mt-8">
+            <div class="max-w-screen-lg bg-white rounded-lg shadow-xl mx-auto flex">
+                <div class="w-1/2 solar-card">
+                    <div class="w-64 h-8 flex p-4">
+                        <a href="/">
+                            <div class="rounded-full bg-red-500 h-4 w-4 mr-2"></div>
+                        </a>
+                        <div class="rounded-full bg-yellow-500 h-4 w-4 mr-2"></div>
+                        <div class="rounded-full bg-green-500 h-4 w-4 mr-2"></div>
+                    </div>
+                    <header class="p-20 mt-32">
+                        <img src="static/sunny.png" alt="Logo" class="w-32 mr-24 mx-auto items-center">
+                        <h3 class="text-center text-white text-4xl pt-2 font-medium">Solar Market</h3>
+                        <p class="text-xl text-white text-center"> Ücretsiz Kayıt Ol </p>
+                    </header>
+                    <footer>
+
+                    </footer>
+                </div>
+                <div class="w-1/2">
+                    <div class="p-8 mx-auto mt-8">
+                        <h3 class="text-3xl mb-8 font-medium">Kayıt Ol</h3>
+                        <form method="POST" action="#">
+
+                            <div class="py-2">
+                                <label for="name" class="">İsim</label>
+
+                                <div class="mt-2">
+                                    <input id="name" placeholder="isim" type="text" class="form-control border my-3 px-3 py-2 w-full  " name="name" value="">
+                                </div>
+                            </div>
+
+                            <div class="py-2">
+                                <label for="name" class="">Soyisim</label>
+
+                                <div class="mt-2">
+                                    <input id="name" placeholder="soyisim" type="text" class="form-control border my-3 px-3 py-2 w-full  " name="surname" value="">
+                                </div>
+                            </div>
+
+                            <div class="py-2">
+                                <label for="name" class="">Tel No</label>
+
+                                <div class="mt-2">
+                                    <input id="name" placeholder="tel no" type="text" class="form-control border my-3 px-3 py-2 w-full  " name="phone" value="">
+                                </div>
+                            </div>
+
+                            <div class="py-2">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Email Adresi</label>
+
+                                <div class="mt-2">
+                                    <input id="email" placeholder="customer@gmail.com" type="email" class="form-control  border my-3 px-3 py-2 w-full" name="email">
+
+                                </div>
+                            </div>
+
+                            <div class="py-2">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">Doğum Tarihi</label>
+
+                                <div class="mt-2">
+                                    <div class="mt-2">
+                                    <input id="name" placeholder="1998-02-12" type="text" class="form-control border my-3 px-3 py-2 w-full  " name="birthdate" value="">
+                                </div>
+
+                                </div>
+                            </div>
+
+                            <div class="py-2">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Parola</label>
+
+                                <div class="mt-2">
+                                    <input id="password" type="password" class="form-control border my-3 px-3 py-2 w-full" name="password" required autocomplete="new-password">
+
+
+                                </div>
+                            </div>
+                                <label for="email">
+                                <b>Acount Type<font size="-5">(You can select just one type account)</font></b>
+                                </label> 
+                                <div style="margin: 0 auto; display: table;">
+                                    <label class="container">Customer&nbsp;
+                                    <input type="checkbox" id="radio-club" checked="checked" user_type="0" name="usertype" value="cus">
+                                    <span class="checkmark"></span>
+                                    </label>
+
+                                    <label class="container" style="margin-left: 30px;">Seller
+                                    <input type="checkbox" id="radio-scouting-agency" user_type="1" name="usertype" value="sel">
+                                    <span class="checkmark"></span>
+                                    </label>
+                                <div style="margin-top: 10px;"></div>
+
+                                <div style="margin-bottom: 15px;"></div>
+                                </div>
+
+                            <div class="form-group row mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="submit" class="mt-4 px-6 py-3 rounded profil text-sm text-white font-bold">
+                                        Kayıt Ol
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
